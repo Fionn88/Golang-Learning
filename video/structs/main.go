@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type person struct {
 	firstName string
@@ -37,6 +39,15 @@ func main() {
 			zipCode: 94000,
 		},
 	}
-	fmt.Printf("%+v\n", jim)
+	jimPointer := &jim
+	jimPointer.updateName("Jimmy")
+	jim.print()
+}
 
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
 }
