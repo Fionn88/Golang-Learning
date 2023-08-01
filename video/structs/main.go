@@ -39,8 +39,13 @@ func main() {
 			zipCode: 94000,
 		},
 	}
-	jimPointer := &jim
-	jimPointer.updateName("Jimmy")
+	// ========== Jim Pointer ==========
+	// jimPointer := &jim
+	// jimPointer.updateName("Jimmy")
+	// jim.print()
+
+	// ========== Pointer Shortcut ==========
+	jim.updateName("Jimmy")
 	jim.print()
 }
 
