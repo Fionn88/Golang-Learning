@@ -4,5 +4,5 @@
     - [Ref](https://github.com/gopl-zh/gopl-zh.github.com)
     - [Online Reading](https://gopl-zh.github.io/index.html)
 
-- 影片：Go The Complete Developer's Guide (Golang)
-    - [Done]：[Video Class](https://www.udemy.com/course/go-the-complete-developers-guide/)
+- [Done] 影片：Go The Complete Developer's Guide (Golang)
+    - [Video Class](https://www.udemy.com/course/go-the-complete-developers-guide/)
