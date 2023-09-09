@@ -15,7 +15,7 @@ LABEL:
 		fmt.Println("worker2")
 		time.Sleep(time.Second)
 		select {
-		case <-ctx.Done(): // 等待上级通知
+		case <-ctx.Done():
 			break LABEL
 		default:
 		}
