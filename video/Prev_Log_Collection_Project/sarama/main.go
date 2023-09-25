@@ -20,7 +20,7 @@ func main() {
 	defer client.Close()
 
 	msg := &sarama.ProducerMessage{}
-	msg.Topic = "shoppings"
+	msg.Topic = "web_log"
 	msg.Value = sarama.StringEncoder("2023.9.11Go")
 
 	pid, offset, err := client.SendMessage(msg)
