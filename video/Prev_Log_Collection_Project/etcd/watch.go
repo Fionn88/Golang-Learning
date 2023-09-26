@@ -17,7 +17,7 @@ func main() {
 
 	}
 	defer cli.Close()
-	watchCh := cli.Watch(context.Background(), "s4")
+	watchCh := cli.Watch(context.Background(), "collect_log_conf")
 	for wresp := range watchCh {
 		for _, evt := range wresp.Events {
 			fmt.Printf("type:%s key:%s value:%s\n", evt.Type, evt.Kv.Key, evt.Kv.Value)
