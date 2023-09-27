@@ -19,7 +19,7 @@ func main() {
 	}
 	defer cli.Close()
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	str := `[{"path": "my.log","topic": "web_log"},{"path": "/log/s4.log","topic": "s4_log"}]`
+	str := `[{"path": "my.log","topic": "web_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/s4.log","topic": "s4_log"}]`
 	pr, err := cli.Put(ctx, "collect_log_conf", str)
 	if err != nil {
 		fmt.Println("put etcd failed,err:%v", err)
