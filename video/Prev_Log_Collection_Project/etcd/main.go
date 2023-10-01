@@ -19,7 +19,8 @@ func main() {
 	}
 	defer cli.Close()
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	str := `[{"path": "my.log","topic": "web_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/s4.log","topic": "s4_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/nazha.log","topic": "nazha_log"}]`
+	str := `[{"path": "my.log","topic": "web_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/s4.log","topic": "s4_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/nazha.log","topic": "nazha_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/nazha2.log","topic": "nazha_log"}]`
+	// str := `[{"path": "my.log","topic": "web_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/s4.log","topic": "s4_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/nazha.log","topic": "nazha_log"}]`
 	// str := `[{"path": "my.log","topic": "web_log"},{"path": "/Users/FionnKuo/Documents/Developer/Dev/log/s4.log","topic": "s4_log"}]`
 	pr, err := cli.Put(ctx, "collect_log_conf", str)
 	if err != nil {
